@@ -86,13 +86,16 @@ Max_display_on_screen=int(input('Enter the maximum outputs to display(Max_displa
 Target_number=int(input('Enter the Target number :'))
 def num_display(Limit,Max,Target):#300,8,4
     num = 1
-                   # 4      301
+                   # 2      6
     for i in range(Target,Limit+1):#i=4
-        #   1 <= 8
+        #   2 <= 10
         if(num<=Max):
-                   #1*4
+                   #1*2=2 4
             print(num*Target,' ',end='')
             num+=1
+            if(Limit==num*Target):
+                print(num * Target, ' ', end='')
+                break
         else:
             break
 num_display(Limit_number,Max_display_on_screen,Target_number)
